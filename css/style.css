@@ -375,6 +375,11 @@ main {
   color: gray;
   font-size: 16px;
 }
+.footer__list:hover {
+  color: rgb(245, 240, 240);
+  font-size: 16px;
+  cursor: pointer;
+}
 .footer__bottom__title {
   color: gray;
   text-align: center;

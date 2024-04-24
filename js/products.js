@@ -31,7 +31,7 @@ function mapData(product) {
               <img class="products__img" data-id=${prod.id} src=${prod.image} alt="" />
             </div>
             <div class="products__card__info">
-              <h3 class="products__card__info__title">${prod.category}</h3>
+              <h3 class="products__card__info__title">category: ${prod.category}</h3>
               <p class="products__card__info__desc">price: ${prod.price}</p>
             </div>
           </div>

@@ -29,6 +29,12 @@
     font-size: 16px;
   }
 
+  &__list:hover {
+    color: rgb(245, 240, 240);
+    font-size: 16px;
+    cursor: pointer;
+  }
+
   &__bottom__title {
     color: gray;
     text-align: center;

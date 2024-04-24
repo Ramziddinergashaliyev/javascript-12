@@ -1,4 +1,5 @@
 const productCard = document.querySelector(".product");
+let loading = document.querySelector(".loading__cards");
 
 let API__URL = "https://fakestoreapi.com";
 
@@ -10,7 +11,10 @@ async function fetchData(api) {
   data
     .json()
     .then((res) => mapDataProd(res))
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err))
+    .finally(() => {
+      loading.style.display = "none";
+    });
 }
 fetchData(API__URL);
 
@@ -30,4 +34,17 @@ function mapDataProd(produc) {
             </div>
           </div>
   `;
+}
+
+function loadCard(count) {
+  let loadingCards = "";
+  for (let i = 0; i < count; i++) {
+    loadingCards += `
+          <div class="loading__card">
+            <div class="loading__card__img bg__animation"></div>
+            <div class="loading__card__info bg__animation"></div>
+          </div>
+    `;
+  }
+  loading.innerHTML = loadingCards;
 }
